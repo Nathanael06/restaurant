@@ -1,0 +1,557 @@
+body {
+    background: url(../images/header-section.jpg) no-repeat fixed;
+    background-size: cover;
+    color: floralwhite;
+    margin: 0 auto;
+    font-family: 'Ravi Prakash', cursive;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #373737;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: 0.5s all;
+
+}
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-container {
+    margin: 10px 20% 10px 20%;
+}
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 700px;
+    line-height: 12px;
+}
+
+header h1 { 
+    font-size: 100px;
+    text-transform: uppercase;
+}
+header img {
+    height: 300px;
+}
+
+header span {
+    font-size: 30px;
+}
+
+
+/* à propos */
+
+section#about {
+    display: flex;
+    justify-content: center;
+    background: #373737;
+}
+
+section#about {
+    margin-bottom: -30px;
+    margin-left: calc(20% + 32px);
+    margin-right: calc(20% + 32px);
+}
+
+section#about div {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+section#about div h3 {
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+/* classe pour le catégorie about */
+
+.opening {background: url(../images/1.jpg);}
+.mention {background: url(../images/2.jpg);}
+.cocktail {background: url(../images/3.jpg);}
+
+/* happy hour */
+
+section#cocktails {
+    background: url(../images/cocktail-section.jpg) fixed;
+    padding: 20px;
+}
+
+.first-row {display: flex;}
+.second-row {display: flex;}
+
+.col-3 { flex: 0.333; }
+.col-2 { flex: 0.5; }
+
+
+
+.cocktail-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    height: 300px;
+    position: relative;
+    padding: 15px;
+}
+
+.cocktail-item .col-2 img {
+    width: 140px;
+}
+.cocktail-item .col-3 img {
+    width: 100px;
+}
+.cocktail-item img {
+    width: 140px;
+}
+
+.cocktail-item p {
+    font-size: 25px;
+}
+
+.cocktail-item h4 {
+    font-size: 27px; 
+    text-transform: uppercase;
+}
+
+.cocktail-item:hover .overlay {
+    height: 100%;
+    padding: 10px;
+}
+
+.sunmoon-banner { background: url(../images/sunmoon-banner.jpg);}
+.mentalux-banner {background: url(../images/mentalux-banner.jpg);}
+.coco-banner {background: url(../images/coco-banner.jpg);}
+.citrinus-banner {background: url(../images/citrinus-banner.jpg);}
+.spicherry-banner {background: url(../images/cherry-banner.jpg);} 
+
+footer {
+    background-color: #373737;
+    text-align: center;
+    font-weight: bold;
+    color: floralwhite;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <!-- head -->
+    <head>
+        <title>NataBar - Menu de l'hotel</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Ravi+Prakash&display=swap" rel="stylesheet">     
+    </head>
+
+
+    <!-- body -->
+    <body>
+        <header>
+            <img src="images/logo.png">
+            <h1>NataBar</h1>
+            <span>Des cocktails maison d’une grande qualitée </span>
+        </header>
+        
+
+        <!-- section details -->
+        <section id="about" >
+            <div class="opening">
+                <h3>8H-12H et 15H-23H</h3>
+
+            </div>
+            <div class="mention">
+                <h3>Raffiné</h3>
+            </div>
+            <div class="cocktail">
+                <h3>5 cocktails</h3>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- section happy hour -->
+        <section id="cocktails">
+            <div class="section-container">
+                <div class="first-row ">
+                    <div class="sunmoon-banner cocktail-item col-2">
+                        <h4>• Sunmoon – 7€80</h4>
+                        <div class="overlay">
+                            <img src="images/sunmoon.png"/>
+                            <p>Cocktail grenadine ananas avec une pointe d’orange</p>
+                        </div>
+                    </div>
+        
+                    <div class="mentalux-banner cocktail-item col-2">
+                        <h4>• Mentalux – 3€90</h4>
+                        <div class="overlay">
+                            <img src="images/mentalux.png"/>
+                            <p>Cocktail Sirop de Menthe et Jus de poire</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="second-row">
+                    <div class="coco-banner cocktail-item col-3">
+                        <h4>• Cocowhip – 9€20</h4>
+                        <div class="overlay">
+                            <img src="images/cocowhip.png"/>
+                            <p>Cocktail Noix de coco, Lait d’amande et Framboise</p>
+                        </div>
+                    </div>
+
+                    <div class="citrinus-banner cocktail-item col-3">
+                        <h4>• Citrinus – 3€20</h4>
+                        <div class="overlay">
+                            <img src="images/citrinus.png"/>
+                            <p>Cocktail Citron et poire avec lait d’amande</p>
+                        </div>
+                    </div>
+
+                    <div class="spicherry-banner cocktail-item col-3">
+                        <h4>• Spicherry – 5€20</h4>
+                        <div class="overlay">
+                            <img src="images/spicherry.png"/>
+                            <p>Cocktail Cerise, fruits rouge avec pointe de cassis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- pied de page -->
+        <footer>
+            <p>&copy; Copyright 2020 - NataBar</p>
+        </footer>
+    </body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CV de Rodrigot - Chevalier Pro</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/styles.css">
+        
+    </head>
+    <body>
+        <header>
+            <img class="avatar-img" src="images/warrior.png">
+            <h1 class="big-title">Rodrigo</h1>
+            <h3>Chevalier Pro</h3>
+        </header>
+        
+        <nav class="nav">
+            <ul>
+                <li><a href="#about">Qui suis-je?</a></li>
+                <li><a href="#conquest">Conquêtes</a></li>
+                <li><a href="#weapons">Armes</a></li>
+            </ul>
+        </nav>
+
+        <section id="about">
+            <div class="section-container">
+                <h1>Qui suis-je?</h1>
+                <p>
+                    "Bonjour, moi c'est Rodrigo, je suis né en l'an 485."  <br>
+                    "Je recherche un emploi dans l'armée en tant que commandant de l’arbalète sacrée"  <br>
+                    "Je possède de multiples compétences en gestion et en stratégie de combat"  <br>
+                    "Merci de me contacter au 01 02 03 04 05"<br>
+                    Contact: rodrigo.cavalerie@graven.yt
+                </p>
+
+            </div>
+        </section>
+
+
+        <section id="conquest">
+            <div class="section-container">
+                <h1>Conquêtes</h1>
+                <ul>
+                    <li>Siège de Graven - 518 - Commandant de l'armée gravenienne</li>
+                    <li>Bataille du Mont Badon - 516 - Attaquant bretons sur es saxons</li>
+                    <li>Siège d'Arles - 507-508 - Défenseur Francs et formation sur l’arbalète  </li>
+                    <li>Bataille de Vouillé - printemps 507 - Attaquant Francs  </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section id="weapons">
+            <div class="section-container">
+                <h1>Armes</h1>
+                <div class="weapon-section">
+                    <div class="weapons-item">
+                        <img src="images/axe.png">
+                        <p>1920</p>
+                    </div>
+                    <div class="weapons-item">
+                        <img src="images/cannon.png">
+                        <p>1920</p>
+                    </div>
+                    <div class="weapons-item">
+                        <img src="images/catapult.png">
+                        <p>1920</p>
+                    </div>
+                    <div class="weapons-item">
+                        <img src="images/crossbow.png">
+                        <p>1920</p>
+                    </div>
+                    <div class="weapons-item">
+                        <img src="images/spear.png">
+                        <p>1920</p>
+                    </div>
+                    <div class="weapons-item">
+                        <img src="images/torture.png">
+                        <p>1920</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </section>
+
+        
+
+        <footer>
+            
+            <p>&copy; 485-2020  -  Tout droits réservés</p>
+        </footer>
+
+
+    </body>
+</html>
+
+
+
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: #373737;
+    color: floralwhite;
+    
+}
+section {
+    display: table;
+    width: 100%;
+}
+.section-container {
+    background-color: #373737;
+    margin: 50px 20% 50px;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img.avatar-img {
+    width: 200px;
+}
+header h1.big-title {
+    font-size: 180px;
+    text-transform: uppercase;
+}
+/* nav */
+
+nav.nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
+nav.nav ul li a {
+    text-decoration: none;
+    background-color: floralwhite;
+    color: #373737;
+    padding: 10px;
+    text-transform: uppercase;
+    
+}
+
+/* about */
+section#about {
+    height: 250px;
+    background: url(../images/intro.jpg) fixed no-repeat;
+    background-position: center;
+}
+
+/* weapons */
+section#weapons {
+    height: 250px;
+    background: url(../images/armurerie.jpg) fixed no-repeat;
+    background-position: center;
+}
+
+.weapon-section {
+    display: flex;
+    padding: 20px;
+}
+
+.weapons-item img {
+    width: 100px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+/* pied de page */
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+                    <li class="localisation">localisation <br></li>
+                    <div class="apercu-localisation"> 
+                        <a href="#localisation">GPS</a></div>
+
+                    <li class="reseau">réseaux</li>
+                    <div class="apercu-reseau">
+                        <a href="#facebook">facebook</a>
+                        <a href="insta">instagrame</a>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            <section id="plats">
+                <div class="card">
+                    <h4>feqggbr</h4> 
+                    <div class="overlay">
+                        <div class="all-name">
+                            <div class="name">
+                                cnziCBIEZCBOIZBCOIZQBUEIOCBU
+
+                            </div>
+                            <div class="legend">
+                                BSXUXJUZNXNZXIZIIZXI
+
+                            </div>
+                        </div>
+                        <img src="../images/">
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section id="fromage">
+                <div class="card">
+                    <h4>feqggbr</h4> 
+                    <div class="overlay">
+                        <div class="all-name">
+                            <div class="fromage">
+                                cnziCBIEZCBOIZBCOIZQBUEIOCBU
+
+                            </div>
+                            <div class="legend">
+                                BSXUXJUZNXNZXIZIIZXI
+
+                            </div>
+                        </div>
+                        <img src="../images/">
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section id="dessert">
+                <div class="card">
+                    <h4>feqggbr</h4> 
+                    <div class="overlay">
+                        <div class="all-name">
+                            <div class="dessert">
+                                cnziCBIEZCBOIZBCOIZQBUEIOCBU
+
+                            </div>
+                            <div class="legend">
+                                BSXUXJUZNXNZXIZIIZXI
+
+                            </div>
+                        </div>
+                        <img src="../images/">
+                    </div>
+
+                </div>
+            </section>
+        </section>
+
+
+
+        
+
